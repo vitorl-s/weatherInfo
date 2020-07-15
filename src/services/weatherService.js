@@ -9,6 +9,6 @@ export async function getWeatherByLatLgn(lat, lon) {
     await console.log('valor weather', response);
     return Promise.resolve(response);
   } catch (error) {
-    console.log('error get genres', error);
+    console.log('error weatherInfo', error);
   }
 }

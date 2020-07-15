@@ -1,5 +1,4 @@
 export const Colors = {
-  background: 'lightblue',
-  text: 'black',
-  mainColor: 'red',
+  background: '#003c66',
+  text: 'white',
 };
