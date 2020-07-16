@@ -18,6 +18,11 @@ yarn
 Run the app:
 
 ```sh
-react-native run-ios or
+react-native run-ios
+```
+
+or
+
+```sh
 react-native run-android
 ```
