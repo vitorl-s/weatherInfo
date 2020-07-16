@@ -8,34 +8,36 @@ const styles = StyleSheet.create({
   },
   loadingContainer: {
     flex: 1,
+    paddingTop: 10,
     justifyContent: 'center',
   },
   topContainer: {
-    marginTop: Platform.OS === 'ios' ? getStatusBarHeight() + 20 : 20,
-    flex: 0.6,
+    marginTop: Platform.OS === 'ios' ? getStatusBarHeight() + 20 : 10,
+    flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingBottom: 10,
   },
   buttonContainer: {
     alignSelf: 'flex-end',
     marginRight: 10,
   },
   bottomContainer: {
-    marginTop: 35,
     marginHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    flex: 0.4,
+    flex: 0.5,
     alignItems: 'center',
   },
   iconContainer: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     marginHorizontal: 10,
+    marginBottom: 1,
   },
   locationContainer: {
     marginLeft: 20,
+    flex: 1,
   },
   location: {
     fontSize: 38,

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, ActivityIndicator} from 'react-native';
+import {View, Text, Image, ActivityIndicator, Alert} from 'react-native';
 import {getWeatherByLatLgn} from '../../services/weatherService';
 import {baseImgUrl} from '../../consts/baseImgUrl';
 import Geolocation from '@react-native-community/geolocation';
@@ -13,9 +13,14 @@ const WeatherPage = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
   useEffect(() => {
-    Geolocation.getCurrentPosition((info) => {
-      getUserLocation(info.coords.latitude, info.coords.longitude);
-    });
+    Geolocation.getCurrentPosition(
+      (info) => {
+        getUserLocation(info.coords.latitude, info.coords.longitude);
+      },
+      (error) => {
+        Alert.alert('Por favor ative sua localização e reinicie o aplicativo');
+      },
+    );
     Geolocation.watchPosition((success) => {
       getUserLocation(success.coords.latitude, success.coords.longitude);
     });
