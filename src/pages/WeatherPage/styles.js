@@ -15,8 +15,14 @@ const styles = StyleSheet.create({
     flex: 0.6,
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingBottom: 10,
+  },
+  buttonContainer: {
+    alignSelf: 'flex-end',
+    marginRight: 10,
   },
   bottomContainer: {
+    marginTop: 35,
     marginHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -59,7 +65,20 @@ const styles = StyleSheet.create({
   infoValue: {
     fontSize: 18,
     color: Colors.text,
-    marginTop: 10,
+    marginTop: 12,
+  },
+  circle: {
+    flex: 0.3,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 500,
+    borderColor: 'white',
+    borderWidth: 5,
+  },
+  middleContainer: {
+    flex: 0.6,
+    alignItems: 'center',
   },
 });
 
